@@ -1,7 +1,9 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import todosFactory from './factories/todos-factory'
+import todosController from './todos/todos';
 
-const app = angular.module('app', [uiRouter]);
+const app = angular.module('app', [uiRouter, todosFactory.name]);
 
 app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
 	$urlRouterProvider.otherwise('/');
@@ -9,11 +11,12 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
 	$stateProvider
 		.state('todos', {
 			url: '/',
-			template: require('todos/todos.html')
+			template: require('./todos/todos.html'),
+			controller: todosController
 		})
 		.state('about', {
 			url: '/about',
-			template: require('about/about.html')
+			template: require('./about/about.html')
 		});
 	
 	$locationProvider.html5Mode(true);
