@@ -1,6 +1,9 @@
 import _ from 'lodash';
 
 export default function($scope, todosFactory) {
+/*	
+	!!STATIC DATA!!
+
 	$scope.todos = [
 	{
 		isCompleted : true,
@@ -13,7 +16,7 @@ export default function($scope, todosFactory) {
 		isEditing : false
 	}
 	];
-
+*/
 	$scope.onCompletedClick = (todo) => {
 		todo.isCompleted = !todo.isCompleted;
 	};
@@ -33,6 +36,8 @@ export default function($scope, todosFactory) {
 	
 	// $scope.cancelTask = _.partial(todosFactory.cancelTask);
 
+	todosFactory.getTasks($scope);
+
 	//AFTER de structuring
 
 	$scope.addTask = _.partial(addTask, $scope);
@@ -41,7 +46,7 @@ export default function($scope, todosFactory) {
 
 	$scope.editTask = _.partial(editTask);
 
-	$scope.saveTask = _.partial(saveTask);
+	$scope.saveTask = _.partial(saveTask, $scope);
 	
 	$scope.cancelTask = _.partial(cancelTask);
 	
