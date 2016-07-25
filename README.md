@@ -2,12 +2,12 @@
 
 Technology Stack Used:
 
-MongoDB
-EmberJS
-AngularJS
-NodeJS
+* MongoDB
+* EmberJS
+* AngularJS
+* NodeJS
 
-Webpack
-SASS
-Babel/ES6
-Bootstrap
+* Webpack
+* SASS
+* Babel/ES6
+* Bootstrap
