@@ -6,7 +6,6 @@ Technology Stack Used:
 * EmberJS
 * AngularJS
 * NodeJS
-
 * Webpack
 * SASS
 * Babel/ES6
