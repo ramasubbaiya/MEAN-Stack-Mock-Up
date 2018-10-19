@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
 })
 
 export class PosCreateComponent {
-  onAddPost() {
-    console.log('Post Added!');
+  newPost = '';
+
+  onAddPost(postInput: HTMLTextAreaElement) {
+    console.log(postInput.value);
+    this.newPost = 'The user\'s post';
   }
 }
